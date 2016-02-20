@@ -37,6 +37,15 @@ body{
 	background-position: center;
 	background-sze: 100% 50%;-->
 }
+h1 { 
+   position: absolute; 
+   font-size: 5	00%;
+   color:#FFFFFF;
+   top: 15%;
+   line-height:50px;
+   left: 0;
+   width: 100%; 
+}
 footer {
     position: absolute;
     left: 0;
