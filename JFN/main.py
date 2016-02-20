@@ -1,17 +1,23 @@
 from Interpreter import *
-from SongPlayer import *
-from SongSelector import *
+import time
 
 #initializes the SongSelector & interpreter
-player = SongPlayer()
-selector = SongSelector(player)
 interpreter = Interpreter()
 
 words = interpreter.getWords()
-for i in range(len(words)):
-    if (words[i] == "play" and words[i+1] == "way" and words[i+2] == "up"):
-        print("Playing Way Up")
-        player.playSong("Way Up")
+for word in words:
+	if(word == 'today'):
+		print(time.strftime("%d/%m/%y: "))
+	try:
+		 if(1 <int(word) < 500):
+			print(word)
+	except ValueError:
+		pass
+	if(word == 'sets'):
+		print(' sets of ')
+	if(word == 'bench press' or 'pullps' or 'hello'):
+		print(word)
+
             
 
 
