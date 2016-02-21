@@ -23,12 +23,3 @@ class Interpreter:
         except sr.RequestError as e:
             print("Could not request results from Google Speech Recognition service; {0}".format(e))
         return words
-
-    #this part for receiving JSON
-    '''
-    import json
-    receivedJSON = open('textReceived.txt', 'r')
-    receivedText = json.loads(receivedJSON.read())
-    listOfWords = receivedText['QueryResult']['mrec_results']['transcriptions']
-    print(listOfWords[0])
-    '''
